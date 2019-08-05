@@ -16,10 +16,16 @@ export class Home extends React.Component {
 									return (
 										<div key={index} className="col-4 mb-5">
 											<div className="card">
-												<img src="..." className="card-img-top" alt="..." />
+												<img
+													src="http://www.facetheforce.today/random/400"
+													className="card-img-top"
+													alt="..."
+												/>
 												<div className="card-body">
 													<h5 className="card-title">{item.name}</h5>
-													<p className="card-text">{item.homeworld}</p>
+													<p className="card-text">
+														<a href={item.homeworld}>Visit {item.name}s Home Planet</a>
+													</p>
 													<a href="#" className="btn btn-primary">
 														{item.gender}
 													</a>
