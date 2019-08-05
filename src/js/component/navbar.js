@@ -10,13 +10,13 @@ export class Navbar extends React.Component {
 				</Link>
 				<div className="ml-auto">
 					<Link to="/people">
-						<button className="btn btn-primary">People</button>
+						<button className="btn btn-primary m-1">People</button>
 					</Link>
 					<Link to="/vehicles">
-						<button className="btn btn-primary">Vehicles</button>
+						<button className="btn btn-primary m-1">Vehicles</button>
 					</Link>
 					<Link to="/planets">
-						<button className="btn btn-primary">Planets</button>
+						<button className="btn btn-primary m-1">Planets</button>
 					</Link>
 				</div>
 			</nav>
