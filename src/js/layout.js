@@ -3,6 +3,11 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
+
+import { People } from "./views/people";
+import { Vehicles } from "./views/vehicles";
+import { Planet } from "./views/planet";
+
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
@@ -20,13 +25,18 @@ export class Layout extends React.Component {
 		return (
 			<div className="d-flex flex-column h-100">
 				<BrowserRouter basename={basename}>
+					{/* router starts here */}
 					<ScrollToTop>
 						<Navbar />
 						<Switch>
-							<Route exact path="/" component={Home} />
+							{/* Navbar es consistente en todas las paginas */}
 							<Route path="/demo" component={Demo} />
+							<Route path="/people" component={People} />
+							<Route path="/Planets" component={Planet} />
+							<Route path="/vehicles" component={Vehicles} />
+							<Route exact path="/" component={Home} />
 							<Route path="/single/:theid" component={Single} />
-							<Route render={() => <h1>Not found!</h1>} />
+							<Route render={() => <h1>Not foundlkhkjg!</h1>} />
 						</Switch>
 						<Footer />
 					</ScrollToTop>
