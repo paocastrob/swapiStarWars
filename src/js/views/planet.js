@@ -2,6 +2,7 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 export class Planet extends React.Component {
 	render() {
@@ -29,6 +30,14 @@ export class Planet extends React.Component {
 													<a href="#" className="btn btn-primary">
 														{item.climate}
 													</a>
+													<a className="btn btn-primary m-5">
+														{" "}
+														<i className="far fa-star " />
+														Fav{" "}
+													</a>
+													<Link to={"/single/" + index}>
+														Single View <span> Link to: {item.name}</span>
+													</Link>
 												</div>
 											</div>
 										</div>
