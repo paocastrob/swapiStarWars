@@ -27,7 +27,7 @@ export class Planet extends React.Component {
 														<a href={item.url}>Visit {item.name}s Home Planet</a>
 													</p>
 													<a href="#" className="btn btn-primary">
-														{item.gender}
+														{item.climate}
 													</a>
 												</div>
 											</div>

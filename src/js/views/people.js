@@ -2,6 +2,7 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 export class People extends React.Component {
 	render() {
@@ -29,6 +30,14 @@ export class People extends React.Component {
 													<a href="#" className="btn btn-primary">
 														{item.gender}
 													</a>
+													<a className="btn btn-primary m-5">
+														{" "}
+														<i className="far fa-star " />
+														Fav{" "}
+													</a>
+													<Link to={"/single/" + index}>
+														Single View <span> Link to: {item.name}</span>
+													</Link>
 												</div>
 											</div>
 										</div>
@@ -39,7 +48,7 @@ export class People extends React.Component {
 					</Context.Consumer>
 				</div>
 
-				<div className="row">
+				{/*<div className="row">
 					<Context.Consumer>
 						{({ store, actions }) => {
 							return (
@@ -51,7 +60,7 @@ export class People extends React.Component {
 							);
 						}}
 					</Context.Consumer>
-				</div>
+				</div>*/}
 			</div>
 		);
 	}

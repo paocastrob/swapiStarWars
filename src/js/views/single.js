@@ -11,7 +11,7 @@ export class Single extends React.Component {
 					{({ store }) => {
 						return (
 							<h1 className="display-4">
-								This will show the demo element: {store.demo[this.props.match.params.theid].title}
+								{store.name} {store.people[this.props.match.params.theid].name}
 							</h1>
 						);
 					}}

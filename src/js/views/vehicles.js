@@ -26,7 +26,7 @@ export class Vehicles extends React.Component {
 														<a href={item.homeworld}>Visit {item.name}s Home Planet</a>
 													</p>
 													<a href="#" className="btn btn-primary">
-														{item.gender}
+														{item.vehicle_class}
 													</a>
 												</div>
 											</div>
